@@ -80,11 +80,12 @@ Install python and pip, if they are not already installed. Follow the platform s
 
 ## Citation 
 Please cite the paper below if you use the code or to get more insight about the model:
-
-@inproceedings{zadtootaghajMMSys,
-  title={Quality Estimation Models for Gaming Video Streaming Services Using Perceptual Video Quality Dimensions},
-  author={zadtootaghaj, Saman and Schmidt, Steven and Shafiee Sabet, Saeed and Moeller, Sebastian and Griwodz, Carsten },
-  booktitle={Proceedings of the 11th International Conference on Multimedia Systems},
-  year={2020},
-  organization={ACM}
-}
+```
+    @inproceedings{zadtootaghajMMSys,
+    title={Quality Estimation Models for Gaming Video Streaming Services Using Perceptual Video Quality Dimensions},
+    author={zadtootaghaj, Saman and Schmidt, Steven and Shafiee Sabet, Saeed and Moeller, Sebastian and Griwodz, Carsten },
+    booktitle={Proceedings of the 11th International Conference on Multimedia Systems},
+    year={2020},
+    organization={ACM}
+    }
+```
