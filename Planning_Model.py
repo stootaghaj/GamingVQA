@@ -11,7 +11,8 @@ Created on Sun Jun  7 13:54:29 2020
 import numpy as np
 from ffprobe import FFProbe
 import argparse
-
+import re
+import pandas as pd
 
 def test_model(bitrate, coding_res, framerate, clss):
 
@@ -105,7 +106,7 @@ def test_video(video, complexity):
     coding_res = int(metadata.video[0].height)*int(metadata.video[0].width)
     bitrate = int(re.search(r'\d+', metadata.metadata['bitrate']).group());
     framerate = int(metadata.video[0].framerate);
-    test_model(video, coding_res, framerate, complexity)
+    test_model(bitrate, coding_res, framerate, complexity)
     
  
 
