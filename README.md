@@ -45,7 +45,7 @@ The model gives you four estimations:
 - Video Unclearness
 - Video Discontinuity
 
-### Example 
+#### Example 
  ```
     sudo python Planning_Model.py 
         --bitrate=2000 --framerate=60 
@@ -63,21 +63,11 @@ Output:
  ```
 
 # Prepration 
-The following steps should be performed to prepare the setup.
+Install python and pip, if they are not already installed. Follow the platform specific installation instructions. The following step should be performed to prepare the setup.
 ```
     git clone https://github.com/stootaghaj/GamingVQA.git 
     pip install -r requirements.txt
 ```
-
-
-Install python and pip, if they are not already installed. Follow the platform specific installation instructions.
- ```
-    ('Video Quality:', 2.172123020928069)
-    ('Video discontinuity:', 4.568851999906445)
-    ('Video unclearness:', 1.9464660729999999)
-    ('Video fragmentation:', 1.920806603456)
- ```
-
 
 
 ## Citation 
