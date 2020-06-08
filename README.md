@@ -1,7 +1,9 @@
-# GamingPara: Gaming Parametric based Quality models
+# GamingPara: Gaming Parametric based Quality Models
 
-Planning model can predict the gaming video quality based on the video paramters, bitrate, framerate, encoding resolution and gaming video complexity. 
+This repo provides two parametric based video quality metrics, estimating the video quality of cloud gaming services. 
 
+- Planning model can predict the gaming video quality based on the video paramters, bitrate, framerate, encoding resolution and gaming video complexity. 
+- Monitoring model can predict the gaming video quality based on the bitstream information (note that the monitoring model is not yet available in the repo due to IPR concern).
 
 ## How to Use
 In order to run the code there are two options:
