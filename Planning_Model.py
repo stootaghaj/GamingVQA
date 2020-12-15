@@ -9,7 +9,7 @@ Created on Sun Jun  7 13:54:29 2020
 #from __future__ import division
 
 import numpy as np
-from ffprobe import FFProbe
+#from ffprobe import FFProbe
 import argparse
 import re
 import pandas as pd
@@ -27,14 +27,17 @@ def test_model(bitrate, coding_res, framerate, clss):
     
     VUcoef = [[4.299, -2.016, -17.99], 
               [18.58, -3.422, -15.38],
-              [17.13, -4.494, -7.844]];          
+              [17.13, -4.494, -7.844]];   
+    #VUcoef = [[4.299, -2.016, -17.99], 
+     #         [18.58, -3.422, -4.494],
+      #        [17.13, -15.38, -7.844]];          
               
   
 #transform data from MOS to R  for one value
     def MOSfromR_Value(Q):
          MOS_MAX = 4.64;#np.max(df['MOS']);#4.5;#np.max(df['MOS']); #4.9
          MOS_MIN = 1.3;#np.min(df['MOS']); #; #np.min(df['MOS']); #1.05
-         MOS = MOS_MIN + (MOS_MAX-MOS_MIN)/100*Q + Q*(Q-60)*(100-Q)* 7.0e-6
+         MOS =  (MOS_MAX-MOS_MIN)/100*Q + Q*(Q-60)*(100-Q)* 7.0e-6
          return MOS
        
 #transform data from MOS to R  for an array of values
@@ -45,7 +48,7 @@ def test_model(bitrate, coding_res, framerate, clss):
          MOS_MIN = 1.3;
          for i in range(len(Q)):
               if (Q[i] > 0 and Q[i] < 100):
-                   MOS[i] = MOS_MIN + (MOS_MAX-MOS_MIN)/100*Q[i] + Q[i]*(Q[i]-60)*(100-Q[i])* 7.0e-6
+                   MOS[i] =  (MOS_MAX-MOS_MIN)/100*Q[i] + Q[i]*(Q[i]-60)*(100-Q[i])* 7.0e-6
               elif (Q[i] >= 100):
                    MOS[i] = MOS_MAX
               else:
